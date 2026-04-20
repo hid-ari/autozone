@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\catalogo\presentation\screens\catalogo_detail_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/catalogo_service.dart';
 import '../../../../core/utils/image_utils.dart';
@@ -35,8 +37,8 @@ class _CatalogoDetailScreenState extends State<CatalogoDetailScreen> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading) return Scaffold(appBar: AppBar(title: const Text('Catálogo')), body: const Center(child: CircularProgressIndicator()));
-    if (_detalle == null) return Scaffold(appBar: AppBar(title: const Text('Catálogo')), body: const Center(child: Text('No encontrado')));
+    if (_isLoading) return Scaffold(appBar: AppBar(title: const Text('CatÃ¡logo')), body: const Center(child: CircularProgressIndicator()));
+    if (_detalle == null) return Scaffold(appBar: AppBar(title: const Text('CatÃ¡logo')), body: const Center(child: Text('No encontrado')));
 
     final specs = _detalle!['especificaciones'] as Map<String, dynamic>?;
 
@@ -67,4 +69,7 @@ class _CatalogoDetailScreenState extends State<CatalogoDetailScreen> {
     );
   }
 }
+
+
+
 

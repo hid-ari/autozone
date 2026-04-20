@@ -1,9 +1,12 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es concentrar la comunicacion con la API y operaciones de red.
+// Ruta: lib\features\auth\data\auth_service.dart
 import 'package:image_picker/image_picker.dart';
 import '../../../core/network/api_service.dart';
 import '../domain/models/user.dart';
 
 class AuthService {
+  
   static Future<Map<String, dynamic>> login(String matricula, String contrasena) async {
     final response = await ApiService.post('auth/login', {
       'matricula': matricula,
@@ -37,6 +40,7 @@ class AuthService {
   static Future<Map<String, dynamic>> getPerfil() async {
     return await ApiService.get('perfil', withAuth: true);
   }
+
   static Future<Map<String, dynamic>> updateProfilePhoto(XFile foto) async {
     return await ApiService.postMultipart('perfil/foto', null, withAuth: true, file: foto, fileField: 'foto');
   }
@@ -48,4 +52,7 @@ class AuthService {
     }, withAuth: true);
   }
 }
+
+
+
 

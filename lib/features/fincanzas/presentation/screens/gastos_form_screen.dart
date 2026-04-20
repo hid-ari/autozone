@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\fincanzas\presentation\screens\gastos_form_screen.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/gastos_service.dart';
@@ -78,7 +80,7 @@ class _GastosFormScreenState extends State<GastosFormScreen> {
                   child: Text(c['nombre'] ?? ''),
                 )).toList(),
                 onChanged: (val) => setState(() => _categoriaId = val),
-                decoration: const InputDecoration(labelText: 'Categoría'),
+                decoration: const InputDecoration(labelText: 'CategorÃ­a'),
               ),
               TextFormField(
                 controller: _montoCtrl,
@@ -88,7 +90,7 @@ class _GastosFormScreenState extends State<GastosFormScreen> {
               ),
               TextFormField(
                 controller: _descCtrl,
-                decoration: const InputDecoration(labelText: 'Descripción'),
+                decoration: const InputDecoration(labelText: 'DescripciÃ³n'),
               ),
               const SizedBox(height: 24),
               ElevatedButton(
@@ -102,4 +104,7 @@ class _GastosFormScreenState extends State<GastosFormScreen> {
     );
   }
 }
+
+
+
 

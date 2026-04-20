@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir estructuras de datos y conversiones entre objetos y JSON.
+// Ruta: lib\features\vehiculos\domain\models\vehiculo.dart
 class Vehiculo {
   final int id;
   final String placa;
@@ -39,4 +41,7 @@ class Vehiculo {
     );
   }
 }
+
+
+
 

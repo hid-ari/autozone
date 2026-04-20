@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es concentrar la comunicacion con la API y operaciones de red.
+// Ruta: lib\core\network\api_service.dart
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,6 +8,7 @@ import '../constants/api_constants.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ApiService {
+  
   static Future<String?> getToken() async {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString('token');
@@ -98,4 +101,7 @@ class ApiService {
     }
   }
 }
+
+
+
 

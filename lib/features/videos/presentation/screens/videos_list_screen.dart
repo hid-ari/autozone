@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\videos\presentation\screens\videos_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../data/videos_service.dart';
@@ -71,4 +73,7 @@ class _VideosListScreenState extends State<VideosListScreen> {
     );
   }
 }
+
+
+
 

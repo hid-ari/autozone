@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es concentrar la comunicacion con la API y operaciones de red.
+// Ruta: lib\features\mantenimientos\data\mantenimiento_service.dart
 import 'package:image_picker/image_picker.dart';
 import '../../../core/network/api_service.dart';
 
@@ -24,4 +26,7 @@ class MantenimientoService {
     return await ApiService.get('mantenimientos/detalle?id=$id', withAuth: true);
   }
 }
+
+
+
 

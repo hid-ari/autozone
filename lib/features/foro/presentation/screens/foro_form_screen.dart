@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\foro\presentation\screens\foro_form_screen.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/foro_service.dart';
@@ -44,7 +46,7 @@ class _ForoFormScreenState extends State<ForoFormScreen> {
   void _submit() async {
     if (!_formKey.currentState!.validate() || _vehiculoSeleccionado == null) {
       if (_vehiculoSeleccionado == null) {
-        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Debe seleccionar un vehículo')));
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Debe seleccionar un vehÃ­culo')));
       }
       return;
     }
@@ -63,8 +65,8 @@ class _ForoFormScreenState extends State<ForoFormScreen> {
     if (result['success'] == true) {
       context.pop();
     } else {
-      // El API exige que el vehículo tenga foto para crear tema
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(result['message'] ?? 'Asegúrate de que tu vehículo tenga foto.')));
+      // El API exige que el vehÃ­culo tenga foto para crear tema
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(result['message'] ?? 'AsegÃºrate de que tu vehÃ­culo tenga foto.')));
     }
   }
 
@@ -87,15 +89,15 @@ class _ForoFormScreenState extends State<ForoFormScreen> {
                   child: Text('${v['marca']} ${v['modelo']}'),
                 )).toList(),
                 onChanged: (val) => setState(() => _vehiculoSeleccionado = val),
-                decoration: const InputDecoration(labelText: 'Selecciona tu Vehículo relacionado'),
+                decoration: const InputDecoration(labelText: 'Selecciona tu VehÃ­culo relacionado'),
               ),
               const Padding(
                 padding: EdgeInsets.only(top: 8, bottom: 16),
-                child: Text('Nota: El API requiere que el vehículo seleccionado posea una foto para crear un tema.', style: TextStyle(color: Colors.amber, fontSize: 12)),
+                child: Text('Nota: El API requiere que el vehÃ­culo seleccionado posea una foto para crear un tema.', style: TextStyle(color: Colors.amber, fontSize: 12)),
               ),
               TextFormField(
                 controller: _tituloCtrl,
-                decoration: const InputDecoration(labelText: 'Título del Problema/Consulta'),
+                decoration: const InputDecoration(labelText: 'TÃ­tulo del Problema/Consulta'),
                 validator: (val) => val!.isEmpty ? 'Requerido' : null,
               ),
               const SizedBox(height: 16),
@@ -103,7 +105,7 @@ class _ForoFormScreenState extends State<ForoFormScreen> {
                 controller: _descCtrl,
                 maxLines: 4,
                 decoration: const InputDecoration(
-                  labelText: 'Descripción detallada',
+                  labelText: 'DescripciÃ³n detallada',
                   alignLabelWithHint: true,
                   border: OutlineInputBorder(),
                 ),
@@ -128,4 +130,7 @@ class _ForoFormScreenState extends State<ForoFormScreen> {
     );
   }
 }
+
+
+
 

@@ -1,15 +1,28 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir estructuras de datos y conversiones entre objetos y JSON.
+// Ruta: lib\features\auth\domain\models\user.dart
+
 class User {
   final int id;
+  
   final String nombre;
+  
   final String apellido;
+  
   final String correo;
+  
   final String? fotoUrl;
+  
   final String? matricula;
+  
   final String? rol;
+  
   final String? grupo;
+  
   final String? fechaRegistro;
+  
   final String? token;
+  
   final String? refreshToken;
 
   User({
@@ -58,4 +71,7 @@ class User {
     };
   }
 }
+
+
+
 

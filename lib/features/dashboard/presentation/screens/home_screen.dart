@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\dashboard\presentation\screens\home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
@@ -75,7 +77,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.directions_car, color: Colors.orangeAccent),
-              title: const Text('Mis Vehículos', style: TextStyle(color: Colors.white)),
+              title: const Text('Mis VehÃ­culos', style: TextStyle(color: Colors.white)),
               onTap: () {
                 context.pop();
               },
@@ -98,7 +100,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.car_rental, color: Colors.orangeAccent),
-              title: const Text('Catálogo de Vehículos', style: TextStyle(color: Colors.white)),
+              title: const Text('CatÃ¡logo de VehÃ­culos', style: TextStyle(color: Colors.white)),
               onTap: () {
                 context.pop();
                 context.push('/catalogo');
@@ -123,7 +125,7 @@ class HomeScreen extends StatelessWidget {
             const Divider(color: Colors.white24),
             ListTile(
               leading: const Icon(Icons.logout, color: Colors.redAccent),
-              title: const Text('Cerrar sesión', style: TextStyle(color: Colors.redAccent)),
+              title: const Text('Cerrar sesiÃ³n', style: TextStyle(color: Colors.redAccent)),
               onTap: () {
                 context.pop(); // Close drawer
                 authProv.logout();
@@ -144,4 +146,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
+
 

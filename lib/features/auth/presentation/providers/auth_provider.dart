@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es administrar estado y notificar cambios a la interfaz.
+// Ruta: lib\features\auth\presentation\providers\auth_provider.dart
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -6,12 +8,18 @@ import '../../data/auth_service.dart';
 import '../../domain/models/user.dart';
 
 class AuthProvider with ChangeNotifier {
+  
   User? _user;
+  
   bool _isLoading = true;
 
   User? get user => _user;
+  
   bool get isLoading => _isLoading;
+  
+
   bool get isAuthenticated => _user != null;
+
 
   AuthProvider() {
     _checkAuthStatus();
@@ -47,7 +55,7 @@ class AuthProvider with ChangeNotifier {
     } else {
       _isLoading = false;
       notifyListeners();
-      throw Exception(result['message'] ?? 'Error al iniciar sesión');
+      throw Exception(result['message'] ?? 'Error al iniciar sesiÃ³n');
     }
   }
 
@@ -75,7 +83,7 @@ class AuthProvider with ChangeNotifier {
     try {
       final result = await AuthService.updateProfilePhoto(file);
       if (result['success'] == true) {
-        await fetchPerfil(); // Refresh user data
+        await fetchPerfil(); 
       } else {
         throw Exception(result['message'] ?? 'Error al actualizar foto');
       }
@@ -100,7 +108,7 @@ class AuthProvider with ChangeNotifier {
         await prefs.setString('token', newToken);
         _user = User.fromJson(result['data']);
       } else {
-        throw Exception(result['message'] ?? 'Error al actualizar contraseña');
+        throw Exception(result['message'] ?? 'Error al actualizar contraseÃ±a');
       }
     } finally {
       _isLoading = false;
@@ -114,9 +122,9 @@ class AuthProvider with ChangeNotifier {
     try {
       final result = await AuthService.cambiarClave(actual, nueva);
       if (result['success'] == true) {
-        // Contraseña actualizada
+
       } else {
-        throw Exception(result['message'] ?? 'Error al modificar contraseña');
+        throw Exception(result['message'] ?? 'Error al modificar contraseÃ±a');
       }
     } finally {
       _isLoading = false;
@@ -124,4 +132,7 @@ class AuthProvider with ChangeNotifier {
     }
   }
 }
+
+
+
 

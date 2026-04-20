@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\auth\presentation\screens\forgot_password_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/auth_service.dart';
 import 'package:go_router/go_router.dart';
@@ -23,7 +25,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     
     if (result['success'] == true) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Clave temporal asignada (123456). Usa esto para ingresar y luego cámbiala.'), backgroundColor: Colors.green),
+        const SnackBar(content: Text('Clave temporal asignada (123456). Usa esto para ingresar y luego cÃ¡mbiala.'), backgroundColor: Colors.green),
       );
       context.go('/login');
     } else {
@@ -37,19 +39,19 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
-      appBar: AppBar(title: const Text('Recuperar contraseña'), backgroundColor: Colors.orangeAccent),
+      appBar: AppBar(title: const Text('Recuperar contraseÃ±a'), backgroundColor: Colors.orangeAccent),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Ingresa tu matrícula', style: TextStyle(color: Colors.white, fontSize: 18)),
+            const Text('Ingresa tu matrÃ­cula', style: TextStyle(color: Colors.white, fontSize: 18)),
             const SizedBox(height: 20),
             TextField(
               controller: _matriculaCtrl,
               style: const TextStyle(color: Colors.white),
               decoration: const InputDecoration(
-                labelText: 'Matrícula',
+                labelText: 'MatrÃ­cula',
                 filled: true,
                 fillColor: Colors.black26,
                 labelStyle: TextStyle(color: Colors.grey),
@@ -74,4 +76,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     );
   }
 }
+
+
+
 

@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\catalogo\presentation\screens\catalogo_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/catalogo_service.dart';
@@ -59,16 +61,16 @@ class _CatalogoListScreenState extends State<CatalogoListScreen> {
       builder: (context) {
         return AlertDialog(
           backgroundColor: Colors.grey[900],
-          title: const Text('Filtrar Catálogo', style: TextStyle(color: Colors.white)),
+          title: const Text('Filtrar CatÃ¡logo', style: TextStyle(color: Colors.white)),
           content: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 TextField(controller: marcaCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Marca', labelStyle: TextStyle(color: Colors.white70))),
                 TextField(controller: modeloCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Modelo', labelStyle: TextStyle(color: Colors.white70))),
-                TextField(controller: anioCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Año', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
-                TextField(controller: minCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Precio Mínimo', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
-                TextField(controller: maxCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Precio Máximo', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
+                TextField(controller: anioCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'AÃ±o', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
+                TextField(controller: minCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Precio MÃ­nimo', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
+                TextField(controller: maxCtrl, style: const TextStyle(color: Colors.white), decoration: const InputDecoration(labelText: 'Precio MÃ¡ximo', labelStyle: TextStyle(color: Colors.white70)), keyboardType: TextInputType.number),
               ],
             ),
           ),
@@ -107,7 +109,7 @@ class _CatalogoListScreenState extends State<CatalogoListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catálogo de Vehículos'),
+        title: const Text('CatÃ¡logo de VehÃ­culos'),
         actions: [
           IconButton(
             icon: const Icon(Icons.filter_list),
@@ -129,7 +131,7 @@ class _CatalogoListScreenState extends State<CatalogoListScreen> {
                     ? Image.network(ImageUtils.getValidUrl(auto['imagenUrl']), width: 50, height: 50, fit: BoxFit.cover, errorBuilder: (_,__,___) => const Icon(Icons.car_rental, color: Colors.orangeAccent))
                     : const Icon(Icons.car_rental, color: Colors.orangeAccent),
                   title: Text('${auto['marca']} ${auto['modelo']}', style: const TextStyle(color: Colors.white)),
-                  subtitle: Text('Año: ${auto['anio']} - \$${auto['precio']}', style: const TextStyle(color: Colors.white70)),
+                  subtitle: Text('AÃ±o: ${auto['anio']} - \$${auto['precio']}', style: const TextStyle(color: Colors.white70)),
                   trailing: const Icon(Icons.arrow_forward_ios, color: Colors.orangeAccent),
                   onTap: () {
                     context.push('/catalogo-detail/${auto['id']}');
@@ -141,4 +143,7 @@ class _CatalogoListScreenState extends State<CatalogoListScreen> {
     );
   }
 }
+
+
+
 

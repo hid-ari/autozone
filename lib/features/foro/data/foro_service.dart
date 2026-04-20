@@ -1,7 +1,10 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es concentrar la comunicacion con la API y operaciones de red.
+// Ruta: lib\features\foro\data\foro_service.dart
 import '../../../core/network/api_service.dart';
 
 class ForoService {
+  
   static Future<Map<String, dynamic>> getTemas({int page = 1}) async {
     return await ApiService.get('foro/temas?page=$page', withAuth: true);
   }
@@ -22,4 +25,7 @@ class ForoService {
     return await ApiService.post('foro/responder', datos, withAuth: true);
   }
 }
+
+
+
 

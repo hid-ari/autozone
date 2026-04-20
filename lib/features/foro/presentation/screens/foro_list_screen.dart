@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\foro\presentation\screens\foro_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/foro_service.dart';
@@ -91,4 +93,7 @@ class _ForoListScreenState extends State<ForoListScreen> with SingleTickerProvid
     );
   }
 }
+
+
+
 

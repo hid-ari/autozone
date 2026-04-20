@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\gomas\presentation\screens\gomas_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/gomas_service.dart';
 
@@ -69,7 +71,7 @@ class _GomasScreenState extends State<GomasScreen> {
         final ctrl = TextEditingController();
         return AlertDialog(
           title: const Text('Registrar Pinchazo'),
-          content: TextField(controller: ctrl, decoration: const InputDecoration(labelText: 'Descripción')),
+          content: TextField(controller: ctrl, decoration: const InputDecoration(labelText: 'DescripciÃ³n')),
           actions: [
             TextButton(child: const Text('Cancelar'), onPressed: () => Navigator.pop(context)),
             ElevatedButton(
@@ -121,4 +123,7 @@ class _GomasScreenState extends State<GomasScreen> {
     );
   }
 }
+
+
+
 

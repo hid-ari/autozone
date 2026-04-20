@@ -1,7 +1,10 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es concentrar la comunicacion con la API y operaciones de red.
+// Ruta: lib\features\catalogo\data\catalogo_service.dart
 import '../../../core/network/api_service.dart';
 
 class CatalogoService {
+  
   static Future<Map<String, dynamic>> getCatalogo({
     int page = 1,
     String? marca,
@@ -26,4 +29,7 @@ class CatalogoService {
     return await ApiService.get('catalogo/detalle?id=$id', withAuth: true);
   }
 }
+
+
+
 

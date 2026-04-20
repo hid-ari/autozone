@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\vehiculos\presentation\screens\vehiculo_form_screen.dart
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -85,7 +87,7 @@ class _VehiculoFormScreenState extends State<VehiculoFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.vehiculoEdit == null ? 'Registrar Vehículo' : 'Editar Vehículo')),
+      appBar: AppBar(title: Text(widget.vehiculoEdit == null ? 'Registrar VehÃ­culo' : 'Editar VehÃ­culo')),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Form(
@@ -128,7 +130,7 @@ class _VehiculoFormScreenState extends State<VehiculoFormScreen> {
               ),
               TextFormField(
                 controller: _anioCtrl,
-                decoration: const InputDecoration(labelText: 'Año'),
+                decoration: const InputDecoration(labelText: 'AÃ±o'),
                 keyboardType: TextInputType.number,
                 validator: (val) => val!.isEmpty ? 'Requerido' : null,
               ),
@@ -156,4 +158,7 @@ class _VehiculoFormScreenState extends State<VehiculoFormScreen> {
     );
   }
 }
+
+
+
 

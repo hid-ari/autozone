@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\vehiculos\presentation\screens\vehiculo_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
@@ -30,7 +32,7 @@ class _VehiculoListScreenState extends State<VehiculoListScreen> {
     }
 
     if (prov.vehiculos.isEmpty) {
-      return const Center(child: Text('No tienes vehículos registrados.'));
+      return const Center(child: Text('No tienes vehÃ­culos registrados.'));
     }
 
     return ListView.builder(
@@ -56,4 +58,7 @@ class _VehiculoListScreenState extends State<VehiculoListScreen> {
     );
   }
 }
+
+
+
 

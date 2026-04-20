@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\auth\presentation\screens\login_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/auth_provider.dart';
@@ -55,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 controller: _matriculaCtrl,
                 style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
-                  labelText: 'Matrícula',
+                  labelText: 'MatrÃ­cula',
                   filled: true,
                   fillColor: Colors.black26,
                   labelStyle: TextStyle(color: Colors.grey),
@@ -68,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 obscureText: true,
                 style: const TextStyle(color: Colors.white),
                 decoration: const InputDecoration(
-                  labelText: 'Contraseña',
+                  labelText: 'ContraseÃ±a',
                   filled: true,
                   fillColor: Colors.black26,
                   labelStyle: TextStyle(color: Colors.grey),
@@ -90,11 +92,11 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 16),
               TextButton(
                 onPressed: () => context.push('/register'),
-                child: const Text('¿No tienes cuenta? Regístrate', style: TextStyle(color: Colors.orangeAccent)),
+                child: const Text('Â¿No tienes cuenta? RegÃ­strate', style: TextStyle(color: Colors.orangeAccent)),
               ),
               TextButton(
                 onPressed: () => context.push('/forgot-password'),
-                child: const Text('Olvidé mi contraseña', style: TextStyle(color: Colors.orangeAccent)),
+                child: const Text('OlvidÃ© mi contraseÃ±a', style: TextStyle(color: Colors.orangeAccent)),
               ),
             ],
           ),
@@ -103,4 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+
+
 

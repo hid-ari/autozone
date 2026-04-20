@@ -1,4 +1,6 @@
-﻿// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es organizar logica y configuraciones del modulo correspondiente.
+// Ruta: lib\core\routing\app_router.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
@@ -168,4 +170,7 @@ final appRouter = GoRouter(
     ),
   ],
 );
+
+
+
 

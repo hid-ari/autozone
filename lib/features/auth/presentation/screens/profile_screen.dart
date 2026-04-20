@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\auth\presentation\screens\profile_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:image_picker/image_picker.dart';
@@ -35,24 +37,24 @@ class ProfileScreen extends StatelessWidget {
       builder: (context) {
         return AlertDialog(
           backgroundColor: Colors.grey[900],
-          title: const Text('Cambiar Contraseña', style: TextStyle(color: Colors.white)),
+          title: const Text('Cambiar ContraseÃ±a', style: TextStyle(color: Colors.white)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('Ingresa tu contraseña actual y la nueva contraseña para actualizarla.', style: TextStyle(color: Colors.white70, fontSize: 13)),
+              const Text('Ingresa tu contraseÃ±a actual y la nueva contraseÃ±a para actualizarla.', style: TextStyle(color: Colors.white70, fontSize: 13)),
               const SizedBox(height: 16),
               TextField(
                 controller: actualPassCtrl,
                 obscureText: true,
                 style: const TextStyle(color: Colors.white),
-                decoration: const InputDecoration(labelText: 'Contraseña Actual', labelStyle: TextStyle(color: Colors.grey)),
+                decoration: const InputDecoration(labelText: 'ContraseÃ±a Actual', labelStyle: TextStyle(color: Colors.grey)),
               ),
               const SizedBox(height: 16),
               TextField(
                 controller: passCtrl,
                 obscureText: true,
                 style: const TextStyle(color: Colors.white),
-                decoration: const InputDecoration(labelText: 'Nueva Contraseña', labelStyle: TextStyle(color: Colors.grey)),
+                decoration: const InputDecoration(labelText: 'Nueva ContraseÃ±a', labelStyle: TextStyle(color: Colors.grey)),
               ),
             ],
           ),
@@ -70,7 +72,7 @@ class ProfileScreen extends StatelessWidget {
     if (confirm == true && context.mounted) {
       if (passCtrl.text.length < 6) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('La nueva contraseña debe tener al menos 6 caracteres'), backgroundColor: Colors.red),
+          const SnackBar(content: Text('La nueva contraseÃ±a debe tener al menos 6 caracteres'), backgroundColor: Colors.red),
         );
         return;
       }
@@ -78,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
         await authProv.cambiarClave(actualPassCtrl.text, passCtrl.text);
         if (context.mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Contraseña actualizada con éxito'), backgroundColor: Colors.green),
+            const SnackBar(content: Text('ContraseÃ±a actualizada con Ã©xito'), backgroundColor: Colors.green),
           );
         }
       } catch (e) {
@@ -97,7 +99,7 @@ class ProfileScreen extends StatelessWidget {
     final user = authProv.user;
 
     if (user == null) {
-      return const Scaffold(body: Center(child: Text('No has iniciado sesión')));
+      return const Scaffold(body: Center(child: Text('No has iniciado sesiÃ³n')));
     }
 
     return Scaffold(
@@ -142,7 +144,7 @@ class ProfileScreen extends StatelessWidget {
             const Divider(),
             _ProfileItem(
               icon: Icons.badge,
-              label: 'Matrícula',
+              label: 'MatrÃ­cula',
               value: user.matricula ?? 'N/A',
             ),
             _ProfileItem(
@@ -163,8 +165,8 @@ class ProfileScreen extends StatelessWidget {
             const Divider(),
             ListTile(
               leading: const Icon(Icons.password, color: Colors.orangeAccent),
-              title: const Text('Cambiar Contraseña', style: TextStyle(color: Colors.white)),
-              subtitle: const Text('Actualiza tu contraseña actual', style: TextStyle(color: Colors.white54, fontSize: 12)),
+              title: const Text('Cambiar ContraseÃ±a', style: TextStyle(color: Colors.white)),
+              subtitle: const Text('Actualiza tu contraseÃ±a actual', style: TextStyle(color: Colors.white54, fontSize: 12)),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16, color: Colors.white54),
               onTap: () => _showActivateDialog(context),
             ),
@@ -197,4 +199,7 @@ class _ProfileItem extends StatelessWidget {
     );
   }
 }
+
+
+
 

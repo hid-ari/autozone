@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\vehiculos\presentation\screens\vehiculo_detail_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/vehiculo_service.dart';
 import 'package:go_router/go_router.dart';
@@ -33,7 +35,7 @@ class _VehiculoDetailScreenState extends State<VehiculoDetailScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Detalle de Vehículo')),
+      appBar: AppBar(title: const Text('Detalle de VehÃ­culo')),
       body: _isLoading 
         ? const Center(child: CircularProgressIndicator())
         : _detalle == null 
@@ -93,4 +95,7 @@ class _VehiculoDetailScreenState extends State<VehiculoDetailScreen> {
     );
   }
 }
+
+
+
 

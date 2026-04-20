@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\auth\presentation\screens\register_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/auth_service.dart';
 import 'package:go_router/go_router.dart';
@@ -44,13 +46,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Ingresa tu matrícula para registrarte', style: TextStyle(color: Colors.white, fontSize: 18)),
+            const Text('Ingresa tu matrÃ­cula para registrarte', style: TextStyle(color: Colors.white, fontSize: 18)),
             const SizedBox(height: 20),
             TextField(
               controller: _matriculaCtrl,
               style: const TextStyle(color: Colors.white),
               decoration: const InputDecoration(
-                labelText: 'Matrícula',
+                labelText: 'MatrÃ­cula',
                 filled: true,
                 fillColor: Colors.black26,
                 labelStyle: TextStyle(color: Colors.grey),
@@ -75,4 +77,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 }
+
+
+
 

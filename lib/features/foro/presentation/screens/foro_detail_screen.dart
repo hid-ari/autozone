@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\foro\presentation\screens\foro_detail_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/foro_service.dart';
 import '../../../../core/utils/image_utils.dart';
@@ -63,7 +65,7 @@ class _ForoDetailScreenState extends State<ForoDetailScreen> {
     final respuestas = _tema!['respuestas'] as List? ?? [];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Tema en Discusión')),
+      appBar: AppBar(title: const Text('Tema en DiscusiÃ³n')),
       body: Column(
         children: [
           Expanded(
@@ -112,7 +114,7 @@ class _ForoDetailScreenState extends State<ForoDetailScreen> {
                   child: TextField(
                     controller: _respuestaCtrl,
                     decoration: const InputDecoration(
-                      hintText: 'Añadir una respuesta...',
+                      hintText: 'AÃ±adir una respuesta...',
                       border: OutlineInputBorder(),
                       filled: true,
                       fillColor: Colors.black54,
@@ -134,4 +136,7 @@ class _ForoDetailScreenState extends State<ForoDetailScreen> {
     );
   }
 }
+
+
+
 

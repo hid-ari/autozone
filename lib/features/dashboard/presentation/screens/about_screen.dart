@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\dashboard\presentation\screens\about_screen.dart
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -42,7 +44,7 @@ class AboutScreen extends StatelessWidget {
             ),
             const SizedBox(height: 40),
             const Text(
-              '© 2026 AutoZone ITLA',
+              'Â© 2026 AutoZone ITLA',
               style: TextStyle(color: Colors.grey),
             ),
           ],
@@ -101,7 +103,7 @@ class _DeveloperCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              'Matrícula: $matricula',
+              'MatrÃ­cula: $matricula',
               style: const TextStyle(fontSize: 16, color: Colors.orangeAccent, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 24),
@@ -153,3 +155,6 @@ class _ContactTile extends StatelessWidget {
     );
   }
 }
+
+
+

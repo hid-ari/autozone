@@ -1,3 +1,7 @@
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es organizar logica y configuraciones del modulo correspondiente.
+// Ruta: lib\main.dart
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'core/routing/app_router.dart';
@@ -38,3 +42,6 @@ class AutoZoneApp extends StatelessWidget {
     );
   }
 }
+
+
+

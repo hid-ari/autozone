@@ -1,4 +1,6 @@
-// Hideki Rafael Sarmiento Ariyama 20241453
+﻿// Documentacion del archivo.
+// Este archivo pertenece a la capa de aplicacion y su objetivo principal es definir la interfaz de usuario y la interaccion de pantalla.
+// Ruta: lib\features\auth\presentation\screens\activate_account_screen.dart
 import 'package:flutter/material.dart';
 import '../../data/auth_service.dart';
 import 'package:go_router/go_router.dart';
@@ -33,7 +35,7 @@ class _ActivateAccountScreenState extends State<ActivateAccountScreen> {
     
     if (result['success'] == true) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Cuenta activada, ahora puedes iniciar sesión.'), backgroundColor: Colors.green),
+        const SnackBar(content: Text('Cuenta activada, ahora puedes iniciar sesiÃ³n.'), backgroundColor: Colors.green),
       );
       context.go('/login');
     } else {
@@ -70,7 +72,7 @@ class _ActivateAccountScreenState extends State<ActivateAccountScreen> {
               obscureText: true,
               style: const TextStyle(color: Colors.white),
               decoration: const InputDecoration(
-                labelText: 'Nueva Contraseña',
+                labelText: 'Nueva ContraseÃ±a',
                 filled: true,
                 fillColor: Colors.black26,
                 labelStyle: TextStyle(color: Colors.grey),
@@ -95,4 +97,7 @@ class _ActivateAccountScreenState extends State<ActivateAccountScreen> {
     );
   }
 }
+
+
+
 
